@@ -31,3 +31,4 @@ hostel-hq-rag/
 ├── hostel-ui.html        # Multimodal responsive frontend interface
 ├── .gitignore            # Git exclusion rules
 └── README.md             # Project documentation
+
