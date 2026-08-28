@@ -15,7 +15,19 @@ const supabaseKey = process.env.SUPABASE_SERVICE_KEY;
 const supabase = (supabaseUrl && supabaseKey) ? createClient(supabaseUrl, supabaseKey) : null;
 
 const ai = process.env.GEMINI_API_KEY ? new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY }) : null;
-
+// --- ROOT WELCOME ROUTE ---
+app.get('/', (req, res) => {
+    res.json({
+            status: "active",
+                    project: "Hostel HQ RAG Backend",
+                            message: "API server is running successfully!",
+                                    endpoints: {
+                                                health: "/api/health",
+                                                            chat: "/api/chat (POST)"
+                                                                    }
+                                                                        });
+                                                                        });
+                                                                        
 app.get('/api/health', (req, res) => {
     res.json({
             status: "ok",
